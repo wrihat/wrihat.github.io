@@ -1,5 +1,31 @@
-baseURL = 'https://example.org/'
+baseURL = '<https://github.com/wrihat/wrihat.github.io/>'  # 修改为自己博客的名字
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Silas' Blog"
 theme = "hugo-cleanwhite"
-copyright = "@2020 na name"
+copyright = "@2020 name"
+disqusShortname = "" # 如果使用 disqus 评论系统，在这里填写自己的 disqus 用户名 
+hasCJKLanguage = true
+enableEmoji = true
+[permalinks]
+  posts = "/:filenam
+
+[Menus] # 边栏目录
+  main = [
+      {Name = "Archives", URL = "<https://ittenblunt.github.io/my-blog/posts/>"},
+      {Name = "Tags", URL = "<https://ittenblunt.github.io/my-blog/tags/>"},
+      {Name = "Photos", URL = "<https://ittenblunt.github.io/my-blog/photos/>"}
+  ]
+
+[params] # 指定发布的文件目录和博客描述
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+  # description abou this website
+  description = "There is only one thing in the world worse than being talked about, and that is not being talked about."
+
+[params.valine] # 我把它默认甚至为关闭了，想打开可以修改 false 为 true，填写 valine 的 appId 和 appKey 即可开启 valine 的评论系统。（目前 valine 好评在下降，很多人更换了自己的评论系统，我还没有折腾，暂时不提供这部分教程了。想用的可以参考 <https://valine.js.org/> 操作手册）
+  enable = false
+    appId = ''
+    appKey = ''
+    placeholder = '既然来了，那就留个痕迹吧~'
+    visitor = true
+
